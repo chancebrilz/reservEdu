@@ -1,0 +1,11 @@
+{{#if session.isAuthenticated}}
+    <div id="account-info">
+        <span>Chance Brilz</span>
+         <a class="btn btn-flat green" {{action 'invalidateSession'}}>Logout</a>
+    </div>
+{{else}}
+    <div id="account-info" class="no-auth">
+        {{#link-to 'register' class='btn btn-flat green'}} Register {{/link-to}}
+        {{#link-to 'login'}} Login {{/link-to}}
+    </div>
+{{/if}}

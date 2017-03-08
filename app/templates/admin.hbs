@@ -1,0 +1,25 @@
+<header class="color sidebar">
+
+    <div id="logo">
+        {{#link-to 'index'}}
+            <span>reservEdu</span>
+        {{/link-to}}
+    </div>
+
+    {{account-info}}
+
+</header>
+
+<div id="container" >
+
+    {{sidebar-main}}
+
+    <div id="content">
+
+        <h2>School Admin</h2>
+
+        {{outlet}}
+
+    </div>
+
+</div>

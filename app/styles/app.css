@@ -1,0 +1,171 @@
+/*** CSS reset ***/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/*** Fonts ***/
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+#login-form, #register-form {
+    width: 350px;
+    margin: 100px auto;
+}
+
+#login-form h4 {
+    margin: 0 0 20px;
+}
+
+#search-form {
+    margin: 0 0 0 -10px;
+}
+
+#search-form input[type='text'] {
+    border-radius: 3px;
+    color: white;
+    box-sizing: border-box;
+    padding: 20px;
+    background: white;
+    color: #202020;
+}
+
+#search-form .btn {
+    height: 46px;
+}
+
+.error {
+    color: #dd4b39;
+    margin-bottom: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+html,body {
+    background: #E9EBEE;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*** header ***/
+header {
+    background: #FFFFFF;
+    height: 54px;
+    z-index: 10;
+}
+
+header.color {
+    background: #4F5765;
+}
+
+#logo {
+    position: absolute;
+    left: 30px;
+    top: 4px;
+}
+
+#logo span {
+    display: block;
+    background-image: url('/assets/images/logo-black.png');
+    background-size: 100% 100%;
+    font-size: 0;
+    width: 150px;
+    height: 50px;
+}
+
+header.color #logo span {
+    background-image: url('/assets/images/logo-white.png');
+}
+
+#account-info {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    color: #5D5D5D;
+    font-size: 16px;
+}
+
+header.color #account-info {
+    color: #EAEAEA;
+}
+
+#account-info * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#account-info a {
+    color: #5D5D5D;
+    margin: 0 0 0  20px;
+}
+
+#account-info a.btn {
+    color: white;
+    padding: 0 10px;
+    text-transform: none;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#content {
+    height: calc(100vh - 55px);
+    padding: 20px;
+}
+
+#sidebar {
+    background: #FFFFFF;
+    position: absolute;
+    width: 250px;
+    height: calc(100vh - 75px);
+}
+
+header.sidebar {
+    position: absolute;
+    left: 250px;
+    width: calc(100vw - 250px);
+}
+
+
+
+
+
+
+
+/*** welcome page ***/
+.banner {
+    width: 100%;
+    height: 400px;
+    z-index: 6;
+}
+
+.banner .banner-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center 60%;
+    background-size: cover;
+}
+
+.banner .banner-text {
+    color: white;
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+}
+
+.banner .banner-text h2 {
+    font-size: 32px;
+}
+
+#welcome-banner .banner-img {
+    background-image: url('/assets/images/welcome-banner.jpg');
+}

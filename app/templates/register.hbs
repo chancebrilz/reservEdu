@@ -1,0 +1,21 @@
+<form id="register-form" class="card-panel" {{action 'register' on='submit'}}>
+    <h4>Create an account</h4>
+    {{#if errorMessage}}
+        <p class='error'>{{errorMessage}}</p>
+    {{/if}}
+    <div class="input-field">
+        <label for="name">Full Name</label>
+        {{input id='name' autofocus='true' value=name }}
+    </div>
+    <div class="input-field">
+        <label for="email">Email</label>
+        {{input id='email' autofocus='true' value=email }}
+    </div>
+    <div class="input-field">
+        <label for="password">Password</label>
+        {{input id='password' type='password' value=password}}
+    </div>
+    <div class="input-field">
+        <button class="btn green" type="submit">Submit</button>
+    </div>
+</form>
