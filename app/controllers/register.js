@@ -11,6 +11,7 @@ export default Ember.Controller.extend({
 
             let user = this.get('store').createRecord('user', {
                 name: this.get('name'),
+                username: this.get('username'),
                 email: this.get('email'),
                 password: this.get('password')
             });
@@ -20,7 +21,6 @@ export default Ember.Controller.extend({
             }).catch(function(reason) {
                 self.set('errorMessage', reason.errors[0].details);
             });
-            //
 
         }
     }

@@ -114,6 +114,12 @@ header.color #account-info {
     position: absolute;
 }
 
+#container.sidebar #content {
+    width: calc(100vw - 250px);
+    left: 250px;
+    top: 0;
+}
+
 #content {
     height: calc(100vh - 55px);
     padding: 20px;
@@ -123,13 +129,11 @@ header.color #account-info {
     background: #FFFFFF;
     position: absolute;
     width: 250px;
-    height: calc(100vh - 75px);
+    height: calc(100vh - 55px);
 }
 
-header.sidebar {
-    position: absolute;
-    left: 250px;
-    width: calc(100vw - 250px);
+#sidebar nav {
+
 }
 
 
