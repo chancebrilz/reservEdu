@@ -1,21 +1,51 @@
-<form id="register-form" class="card-panel" {{action 'submit' on='submit'}}>
-    <h4>Create an account</h4>
-    {{#if errorMessage}}
-        <p class='error'>{{errorMessage}}</p>
-    {{/if}}
-    <div class="input-field">
-        <label for="name">Full Name</label>
-        {{input id='name' autofocus='true' value=name }}
+<div id="register-form" class="card">
+    <div class="card-tabs">
+        <ul class="tabs">
+            <li class="tab"><a href="#register-personal" class="green-text">Personal</a></li>
+            <li class="tab"><a href="#register-school" class="green-text">Activate School</a></li>
+            <div class="indicator green" style="z-index:1"></div>
+        </ul>
     </div>
-    <div class="input-field">
-        <label for="email">Email</label>
-        {{input id='email' autofocus='true' value=email }}
+    <div class="card-content">
+        <div id="register-personal" class="form">
+            <form id="register-personal-form" {{action 'submit' on='submit'}}>
+                <h4>Create an account</h4>
+                {{#if errorMessage}}
+                    <p class='error'>{{errorMessage}}</p>
+                {{/if}}
+                <div class="input-field">
+                    <label for="name">Full Name</label>
+                    {{input id='name' autofocus='true' value=name }}
+                </div>
+                <div class="input-field">
+                    <label for="email">Email</label>
+                    {{input id='email' value=email }}
+                </div>
+                <div class="input-field">
+                    <label for="password">Password</label>
+                    {{input id='password' type='password' value=password}}
+                </div>
+                <div class="input-field">
+                    <button class="btn green" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="register-school" class="form">
+            <form class="register-school-form" {{action 'submit-school' on 'submit'}}>
+                <h4>Activate school</h4>
+                <p>Start by entering your school's unique code.</p>
+                {{#if errorMessage}}
+                    <p class='error'>{{errorMessage}}</p>
+                {{/if}}
+                <div class="input-field">
+                    <label for="code">Code</label>
+                    {{input id='code' value=code }}
+                </div>
+                <div class="input-field">
+                    <button class="btn green" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="input-field">
-        <label for="password">Password</label>
-        {{input id='password' type='password' value=password}}
-    </div>
-    <div class="input-field">
-        <button class="btn green" type="submit">Submit</button>
-    </div>
-</form>
+</div>

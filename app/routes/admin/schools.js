@@ -1,7 +1,7 @@
 import Ember from 'ember';
-import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
+import AdminRouteMixin from 'reservedu/mixins/admin-route-mixin';
 
-export default Ember.Route.extend(AuthenticatedRouteMixin, {
+export default Ember.Route.extend(AdminRouteMixin, {
 
     session: Ember.inject.service(),
 

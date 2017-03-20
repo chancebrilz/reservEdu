@@ -13,6 +13,9 @@ Router.map(function() {
     this.route('schools');
   });
   this.route('profile');
+
+  // ERROR PAGES
+  this.route('errors/404', {path: '/*path'});
 });
 
 export default Router;

@@ -4,6 +4,8 @@ export default Ember.Route.extend({
 
     session: Ember.inject.service('session'),
 
+    currentUser: Ember.inject.service('current-user'),
+
     titleToken: 'Home',
 
     renderTemplate() {
