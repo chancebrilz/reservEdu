@@ -4,7 +4,8 @@ const { inject: { service }, isEmpty, RSVP } = Ember;
 
 export default Ember.Service.extend({
 
-    session: service('session'),
+    session: Ember.inject.service('session'),
+    store: Ember.inject.service('store'),
 
     load() {
         if (this.get('session.isAuthenticated')) {

@@ -1,6 +1,7 @@
 import Ember from 'ember';
 import OAuth2PasswordGrant from 'ember-simple-auth/authenticators/oauth2-password-grant';
+import ENV from 'reservedu/config/environment';
 
 export default OAuth2PasswordGrant.extend({
-    serverTokenEndpoint: Reservedu.HOST + 'api/token'
+    serverTokenEndpoint: ENV.APP.API.HOST + 'v1/token'
 });

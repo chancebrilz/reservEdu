@@ -45,6 +45,18 @@ a {
     text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 10px 0;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
 html,body {
     background: #E9EBEE;
     font-family: 'Source Sans Pro', sans-serif;
@@ -88,8 +100,13 @@ header.color #logo span {
     font-size: 16px;
 }
 
-header.color #account-info {
+header.color #account-info a:not(.btn) {
     color: #EAEAEA;
+    border-left: 1px solid rgba(255,255,255,.5);
+}
+
+header.color #account-info a:nth-of-type(1) {
+    border-left: 0;
 }
 
 #account-info * {
@@ -99,10 +116,19 @@ header.color #account-info {
 
 #account-info a {
     color: #5D5D5D;
-    margin: 0 0 0  20px;
+    padding: 0 10px;
 }
 
-#account-info a.btn {
+#account-info a:not(.btn) {
+    border-left: 1px solid rgba(0,0,0,.3);
+}
+
+#account-info a:nth-of-type(1) {
+    border-left: 0;
+}
+
+#account-info button,
+#account-info .btn {
     color: white;
     padding: 0 10px;
     text-transform: none;
@@ -132,8 +158,35 @@ header.color #account-info {
     height: calc(100vh - 55px);
 }
 
-#sidebar nav {
+#sidebar-nav h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
 
+#sidebar-nav > ul {
+    padding: 20px;
+}
+
+#sidebar-nav > ul > li > ul {
+    padding: 10px 20px 0;
+}
+
+#sidebar-nav ul li {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#sidebar-nav ul li a {
+    color: rgba(0,0,0,.85);
+}
+
+#sidebar-nav ul li:before {
+    content: '►';
+    font-size: 10px;
+    color: rgba(0,0,0,.4);
+    margin-right: 10px;
+    position: relative;
+    top: -2px;
 }
 
 

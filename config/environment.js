@@ -18,13 +18,14 @@ module.exports = function(environment) {
     },
 
     APP: {
-      // Here you can pass flags/options to your application instance
-      // when it is created
+      API: {
+
+      }
     }
   };
 
   if (environment === 'development') {
-      ENV.APP.HOST = 'http://localhost/';
+      ENV.APP.API.HOST = 'http://localhost/';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -44,7 +45,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-      ENV.APP.HOST = 'http://reservedu.com/';
+      ENV.APP.API.HOST = 'https://api.reservedu.com/';
   }
 
   return ENV;
