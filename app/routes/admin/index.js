@@ -11,4 +11,5 @@ export default Ember.Route.extend(AdminRouteMixin, {
             into: 'admin'
         });
     }
+    
 });

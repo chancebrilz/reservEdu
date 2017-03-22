@@ -1,13 +1,13 @@
 <div id="register-form" class="card">
     <div class="card-tabs">
-        <ul class="tabs">
-            <li class="tab"><a href="#register-personal" class="green-text">Personal</a></li>
-            <li class="tab"><a href="#register-school" class="green-text">Activate School</a></li>
-            <div class="indicator green" style="z-index:1"></div>
+        <ul class="tabs row">
+            <li class="tab col s6"><a href="#register-personal" class="green-text">Personal</a></li>
+            <li class="tab col s6"><a href="#register-school" class="green-text">Activate School</a></li>
+            <div class="indicator green" style="z-index:1;"></div>
         </ul>
     </div>
-    <div class="card-content">
-        <div id="register-personal" class="form">
+    <div class="card-content row">
+        <div id="register-personal" class="form col s12">
             <form id="register-personal-form" {{action 'submit' on='submit'}}>
                 <h4>Create an account</h4>
                 {{#if errorMessage}}
@@ -31,8 +31,8 @@
             </form>
         </div>
 
-        <div id="register-school" class="form">
-            <form class="register-school-form" {{action 'submit-school' on 'submit'}}>
+        <div id="register-school" class="form row">
+            <form id="register-school-form" class="row col s12" {{action 'submitSchool' on 'submit'}}>
                 <h4>Activate school</h4>
                 <p>Start by entering your school's unique code.</p>
                 {{#if errorMessage}}

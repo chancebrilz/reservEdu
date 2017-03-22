@@ -22,6 +22,10 @@ export default Ember.Controller.extend({
                 self.set('errorMessage', reason.errors[0].details);
             });
 
+        },
+
+        submitSchool() {
+            console.log('submitted');
         }
     }
 

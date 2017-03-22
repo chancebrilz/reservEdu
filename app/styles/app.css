@@ -37,7 +37,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 * {
     box-sizing: border-box;
-    position: relative;
 }
 
 a {
@@ -139,13 +138,13 @@ header.color #account-info a:nth-of-type(1) {
 }
 
 #container {
-    height: 100%;
     width: 100%;
     position: absolute;
 }
 
 #container.sidebar #content {
     width: calc(100vw - 250px);
+    position: absolute;
     left: 250px;
     top: 0;
 }
@@ -153,6 +152,7 @@ header.color #account-info a:nth-of-type(1) {
 #content {
     height: calc(100vh - 55px);
     padding: 20px;
+    overflow-y: scroll;
 }
 
 #sidebar {
@@ -194,15 +194,11 @@ header.color #account-info a:nth-of-type(1) {
 }
 
 
-
-
-
-
-
 /*** welcome page ***/
 .banner {
+    position: relative;
     width: 100%;
-    height: 400px;
+    height: 500px;
     z-index: 6;
 }
 

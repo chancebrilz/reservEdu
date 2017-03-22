@@ -7,5 +7,10 @@ export default Ember.Route.extend({
         this.render('register', {
             into: 'main'
         });
+    },
+    afterModel() {
+        $(document).ready(function() {
+            $('.tabs').tabs();
+        });
     }
 });
