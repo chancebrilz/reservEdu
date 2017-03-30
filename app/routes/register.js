@@ -1,6 +1,7 @@
 import Ember from 'ember';
+import UnauthenticatedRouteMixin from 'ember-simple-auth/mixins/unauthenticated-route-mixin';
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(UnauthenticatedRouteMixin, {
     titleToken: 'Register',
     renderTemplate() {
         this.render('main');
@@ -9,8 +10,8 @@ export default Ember.Route.extend({
         });
     },
     afterModel() {
-        $(document).ready(function() {
-            $('.tabs').tabs();
+        Ember.$(document).ready(function() {
+            Ember.$('.tabs').tabs();
         });
     }
 });

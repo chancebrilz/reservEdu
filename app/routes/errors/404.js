@@ -5,6 +5,6 @@ export default Ember.Route.extend({
         this.render('main');
         this.render('errors/404', {
             into: 'main'
-        })
+        });
     }
 });

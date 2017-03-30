@@ -1,1 +1,13 @@
-{{outlet}}
+<div id="content">
+
+    <h2>{{currentUser.user.name}}</h2>
+    <p>Email: {{currentUser.user.email}}</p>
+    <p>Permissions:
+    {{#each-in currentUser.user.permissions as |permission value|}}
+        {{#if value}}
+            {{permission}}, 
+        {{/if}}
+    {{/each-in}}
+    </p>
+
+</div>

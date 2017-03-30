@@ -31,8 +31,8 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 }
 
 .error {
-    color: #dd4b39;
-    margin-bottom: 20px;
+    color: #dd4b39 !important;
+    margin: 10px 0 20px !important;
 }
 
 * {
@@ -45,7 +45,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 10px 0;
+    margin: 0 0 15px 0;
 }
 
 h1 {
@@ -58,6 +58,11 @@ h2 {
 
 h4 {
     font-size: 24px;
+}
+
+p {
+    line-height: normal;
+    margin-bottom: 1em;
 }
 
 html,body {
