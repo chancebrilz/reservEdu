@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('admin', function() {
     this.route('schools');
     this.route('locations');
+    this.route('payments');
   });
   this.route('profile');
 

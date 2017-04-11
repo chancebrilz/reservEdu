@@ -2,17 +2,17 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
-    titleToken: 'Locations',
+    titleToken: 'Payments',
 
     renderTemplate() {
         this.render('admin');
-        this.render('admin/locations', {
+        this.render('admin/payments', {
             into: 'admin'
         });
     },
 
     model() {
-        return this.store.findAll('location');
+        return this.store.findAll('payment');
     }
 
 });

@@ -1,18 +1,17 @@
-<h2>All Schools</h2>
-
+<h2>Your Received Payments</h2>
 
 <table class="bordered responsive-table highlight">
     <thead>
         <tr>
             <th>Name</th>
-            <th>School Code</th>
+            <th>Amount</th>
         </tr>
     </thead>
     <tbody>
-        {{#each model as |school|}}
+        {{#each model as |payment|}}
             <tr>
-                <td>{{school.name}}</td>
-                <td>{{school.code}}</td>
+                <td>{{payment.stripe.source.name}}</td>
+                <td>{{stripe-amount payment.stripe.amount}}</td>
             </tr>
         {{/each}}
     </tbody>

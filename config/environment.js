@@ -28,7 +28,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-      ENV.APP.API.HOST = 'http://localhost';
+      ENV.APP.API.HOST = 'https://api.reservedu.local';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -48,7 +48,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-      ENV.APP.API.HOST = 'https://api.reservedu.com';
+      ENV.APP.API.HOST = 'http://api.reservedu.com';
   }
 
   return ENV;
