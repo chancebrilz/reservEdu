@@ -11,8 +11,8 @@ Router.map(function() {
   this.route('register');
   this.route('admin', function() {
     this.route('schools');
-    this.route('locations');
     this.route('payments');
+    this.route('facilities');
   });
   this.route('profile');
 

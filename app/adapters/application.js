@@ -5,5 +5,8 @@ import ENV from 'reservedu/config/environment';
 export default DS.JSONAPIAdapter.extend(DataAdapterMixin, {
   authorizer: 'authorizer:oauth2',
   host: ENV.APP.API.HOST,
-  namespace: 'v1'
+  namespace: 'v1',
+  plurals: {
+      facility: 'facilities'
+  }
 });

@@ -1,0 +1,20 @@
+<h2>Your Facilities</h2>
+
+<table class="bordered responsive-table highlight">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>School</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each model as |facility|}}
+            <tr>
+                <td>{{facility.name}}</td>
+                <td>{{facility.school.name}}</td>
+                <td>${{facility.meta.price}}</td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
