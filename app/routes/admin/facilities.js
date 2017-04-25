@@ -1,6 +1,7 @@
 import Ember from 'ember';
+import AdminRouteMixin from 'reservedu/mixins/admin-route-mixin';
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(AdminRouteMixin, {
 
     titleToken: 'Facilities',
 
@@ -12,7 +13,9 @@ export default Ember.Route.extend({
     },
 
     model() {
-        return this.store.findAll('facility');
+        return this.store.findAll('facility').catch(function() {
+            return null;
+        });
     }
 
 });

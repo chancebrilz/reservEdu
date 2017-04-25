@@ -1,14 +1,14 @@
 {{#if session.isAuthenticated}}
     <div id="account-info">
-        {{#if currentUser.user.permissions.admin}}
+        {{#if currentUser.user.meta.permissions.admin}}
             {{#link-to 'admin'}}School Admin{{/link-to}}
         {{/if}}
         {{#link-to 'profile'}} {{currentUser.user.name}} {{/link-to}}
-        <button class="btn btn-flat green" {{action 'invalidateSession'}}>Logout</button>
+        <button class="btn btn-flat blue-grey lighten-5" {{action 'invalidateSession'}}>Logout</button>
     </div>
 {{else}}
     <div id="account-info" class="no-auth">
         {{#link-to 'login'}} Login {{/link-to}}
-        {{#link-to 'register' class='btn btn-flat green'}} Register {{/link-to}}
+        {{#link-to 'register' class='btn btn-flat green white-text'}} Register {{/link-to}}
     </div>
 {{/if}}

@@ -4,13 +4,15 @@ import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mi
 export default Ember.Route.extend(ApplicationRouteMixin, {
 
     currentUser: Ember.inject.service('current-user'),
+    currentLocation: Ember.inject.service('current-location'),
 
     title: function(tokens) {
         return tokens.join(' - ') + ' - reservEdu';
     },
 
     beforeModel() {
-        return this._loadCurrentUser();
+        this._loadCurrentUser();
+        this._loadCurrentLocation();
     },
 
     sessionAuthenticated() {
@@ -20,6 +22,10 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
 
     _loadCurrentUser() {
         return this.get('currentUser').load().catch(() => this.get('session').invalidate());
+    },
+
+    _loadCurrentLocation() {
+        return this.get('currentLocation').load();
     }
 
 });

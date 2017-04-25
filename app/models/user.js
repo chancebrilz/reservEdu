@@ -5,7 +5,7 @@ export default DS.Model.extend({
     username: DS.attr(),
     email: DS.attr(),
     password: DS.attr(),
-    permissions: DS.attr(),
+    meta: DS.attr(),
 
     // school attrs
     code: DS.attr(),

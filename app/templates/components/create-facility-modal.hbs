@@ -1,0 +1,70 @@
+
+<div id="create-facility-modal" class="modal modal-fixed-footer" style="height: 80% !important; max-height: 80% !important;">
+    <div class="modal-content">
+      <h4>Create Facility</h4>
+
+      <form id="create-facility">
+          {{#if errorMessage}}
+              <p class='error'>{{errorMessage}}</p>
+          {{/if}}
+          <div class="row">
+              <div class="input-field col s12">
+                  <label for="name">Name</label>
+                  {{input id='name' value=facilityData.name }}
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="input-field col s12">
+                  <label for="description">Description</label>
+                  {{textarea id='description' class='materialize-textarea' value=facilityData.description }}
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="input-field col s6 l9">
+                  {{input type='number' id='price' value=facilityData.price}}
+                  <label for="price">Price</label>
+              </div>
+              <div class="input-field col s6 l3">
+                <select onchange={{action "updatePer" value="target.value"}}>
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="hr">hr</option>
+                  <option value="day">day</option>
+                </select>
+                <label for="per">Per</label>
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="input-field col s6">
+                  {{input type='date' class='datepicker' value=facilityData.starting_date}}
+                   <label for="">Starting Date</label>
+              </div>
+              <div class="input-field col s6">
+                   {{input type='date' class='datepicker' value=facilityData.ending_date}}
+                   <label for="">Ending Date</label>
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="input-field col s6">
+                  {{input type='time' class='timepicker' value=facilityData.starting_time}}
+                   <label for="">Starting Time</label>
+              </div>
+              <div class="input-field col s6">
+                   {{input type='time' class='timepicker' value=facilityData.ending_time}}
+                   <label for="">Ending Time</label>
+              </div>
+          </div>
+
+      </form>
+
+    </div>
+
+    <div class="modal-footer">
+        <a class="modal-action waves-effect waves green btn" {{action 'submit'}}>Create</a>
+      <a class="modal-action modal-close waves-effect waves-red btn-flat ">Cancel</a>
+    </div>
+
+</div>

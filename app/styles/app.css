@@ -137,9 +137,14 @@ header.color #account-info a:nth-of-type(1) {
 
 #account-info button,
 #account-info .btn {
-    color: white;
+    color: #5D5D5D;
     padding: 0 10px;
     text-transform: none;
+}
+
+.white-text button,
+.white-text .btn {
+    color: white;
 }
 
 #container {
@@ -257,3 +262,29 @@ header.color #account-info a:nth-of-type(1) {
 .error_page h1 {
     margin-bottom: 20px;
 }
+
+/*** admin page styles ***/
+
+.add-button {
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-*/

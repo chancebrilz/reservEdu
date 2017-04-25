@@ -3,9 +3,9 @@
     <h2>{{currentUser.user.name}}</h2>
     <p>Email: {{currentUser.user.email}}</p>
     <p>Permissions:
-    {{#each-in currentUser.user.permissions as |permission value|}}
+    {{#each-in currentUser.user.meta.permissions as |permission value|}}
         {{#if value}}
-            {{permission}}, 
+            {{permission}},
         {{/if}}
     {{/each-in}}
     </p>

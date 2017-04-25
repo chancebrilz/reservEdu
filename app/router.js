@@ -10,9 +10,9 @@ Router.map(function() {
   this.route('login');
   this.route('register');
   this.route('admin', function() {
-    this.route('schools');
     this.route('payments');
     this.route('facilities');
+    this.route('reservations');
   });
   this.route('profile');
 

@@ -1,3 +1,8 @@
+<div class="add-button">
+    <a href="#create-facility-modal" class="btn-floating btn-medium waves-effect waves-light green modal-trigger "><i class="material-icons">add</i></a>
+    {{create-facility-modal}}
+</div>
+
 <h2>Your Facilities</h2>
 
 <table class="bordered responsive-table highlight">
@@ -13,7 +18,7 @@
             <tr>
                 <td>{{facility.name}}</td>
                 <td>{{facility.school.name}}</td>
-                <td>${{facility.meta.price}}</td>
+                <td>{{facility-price facility.meta.price}}</td>
             </tr>
         {{/each}}
     </tbody>

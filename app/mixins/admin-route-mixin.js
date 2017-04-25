@@ -7,7 +7,7 @@ export default Ember.Mixin.create(AuthenticatedRouteMixin, {
 
     beforeModel() {
          this._super(...arguments);
-         if(this.get('currentUser.user.permissions.admin') !== true) {
+         if(this.get('currentUser.user.meta.permissions.admin') !== true) {
              this.transitionTo('index');
          }
     }
