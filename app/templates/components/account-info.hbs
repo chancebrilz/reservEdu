@@ -1,9 +1,10 @@
 {{#if session.isAuthenticated}}
     <div id="account-info">
         {{#if currentUser.user.meta.permissions.admin}}
-            {{#link-to 'admin'}}School Admin{{/link-to}}
+            {{#link-to 'admin'}}{{currentUser.user.name}}{{/link-to}}
+        {{else}}
+            {{#link-to 'profile' currentUser.user}} {{currentUser.user.name}} {{/link-to}}
         {{/if}}
-        {{#link-to 'profile'}} {{currentUser.user.name}} {{/link-to}}
         <button class="btn btn-flat blue-grey lighten-5" {{action 'invalidateSession'}}>Logout</button>
     </div>
 {{else}}

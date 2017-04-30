@@ -2,17 +2,15 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
-    session: Ember.inject.service('session'),
-
-    currentUser: Ember.inject.service('current-user'),
-
-    titleToken: 'Home',
-
     renderTemplate() {
         this.render('main');
-        this.render('index', {
+        this.render('school', {
             into: 'main'
         });
+    },
+
+    afterModel(model) {
+        this.set('titleToken', model.get('name'));
     }
 
 });

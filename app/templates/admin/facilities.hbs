@@ -5,21 +5,31 @@
 
 <h2>Your Facilities</h2>
 
-<table class="bordered responsive-table highlight">
+<table class="striped bordered responsive-table highlight">
     <thead>
         <tr>
             <th>Name</th>
-            <th>School</th>
+            <th>Starting Date</th>
+            <th>Ending Date</th>
+            <th>Starting Time</th>
+            <th>Ending Time</th>
             <th>Price</th>
         </tr>
     </thead>
     <tbody>
-        {{#each model as |facility|}}
-            <tr>
-                <td>{{facility.name}}</td>
-                <td>{{facility.school.name}}</td>
-                <td>{{facility-price facility.meta.price}}</td>
-            </tr>
-        {{/each}}
+        {{#if model}}
+            {{#each model as |facility|}}
+                <tr>
+                    <td>{{facility.name}}</td>
+                    <td>{{facility.meta.availability.starting_date}}</td>
+                    <td>{{facility.meta.availability.ending_date}}</td>
+                    <td>{{facility.meta.availability.starting_time}}</td>
+                    <td>{{facility.meta.availability.ending_time}}</td>
+                    <td>{{facility-price facility.meta.price}}</td>
+                </tr>
+            {{/each}}
+        {{else}}
+            <p>Sorry, you don't seem to have any facilities.</p>
+        {{/if}}
     </tbody>
 </table>

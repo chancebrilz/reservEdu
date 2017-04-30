@@ -4,5 +4,7 @@ export default DS.Model.extend({
     name: DS.attr(),
     email: DS.attr(),
     code: DS.attr(),
-    activated: DS.attr()
+    activated: DS.attr(),
+    address: DS.attr(),
+    distance: DS.attr()
 });

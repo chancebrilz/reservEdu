@@ -1,0 +1,20 @@
+{{#if schools}}
+
+    <div class="row flow">
+        {{#each schools as |school|}}
+            <div class="col">
+                {{#link-to 'school' school class='blue-text'}}
+                  <div class="card-panel">
+                      <h5 class="black-text">{{school.name}}</h5>
+                      <span class="grey-text">{{miles school.distance}} miles away</span>
+                  </div>
+                {{/link-to}}
+            </div>
+        {{/each}}
+    </div>
+
+{{else}}
+
+    <p>Loading...</p>
+
+{{/if}}

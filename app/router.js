@@ -14,10 +14,12 @@ Router.map(function() {
     this.route('facilities');
     this.route('reservations');
   });
-  this.route('profile');
+  this.route('profile', { path: '/profile/:user_id' });
+  this.route('school', { path: '/school/:school_id' });
 
   // ERROR PAGES
   this.route('errors/404', {path: '/*path'});
+
 });
 
 export default Router;

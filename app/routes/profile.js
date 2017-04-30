@@ -5,11 +5,18 @@ import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-rout
 export default Ember.Route.extend(AuthenticatedRouteMixin, {
 
     renderTemplate() {
-        this.titleToken = this.get('currentUser.user.name');
         this.render('main');
         this.render('profile', {
             into: 'main'
         });
+    },
+
+    model(params) {
+        return this.store.findRecord('user', params.user_id);
+    },
+
+    afterModel(model) {
+        this.set('titleToken', model.get('name'));
     }
 
 });

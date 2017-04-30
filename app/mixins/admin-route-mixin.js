@@ -5,7 +5,7 @@ export default Ember.Mixin.create(AuthenticatedRouteMixin, {
 
     currentUser: Ember.inject.service('current-user'),
 
-    beforeModel() {
+    afterModel() {
          this._super(...arguments);
          if(this.get('currentUser.user.meta.permissions.admin') !== true) {
              this.transitionTo('index');

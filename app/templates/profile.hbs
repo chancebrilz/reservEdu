@@ -1,9 +1,9 @@
 <div id="content">
 
-    <h2>{{currentUser.user.name}}</h2>
-    <p>Email: {{currentUser.user.email}}</p>
+    <h2>{{model.name}}</h2>
+    <p>Email: {{model.email}}</p>
     <p>Permissions:
-    {{#each-in currentUser.user.meta.permissions as |permission value|}}
+    {{#each-in model.meta.permissions as |permission value|}}
         {{#if value}}
             {{permission}},
         {{/if}}
