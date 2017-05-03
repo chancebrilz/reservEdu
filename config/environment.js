@@ -1,6 +1,6 @@
 /* jshint node: true */
-
 module.exports = function(environment) {
+
   var ENV = {
     modulePrefix: 'reservedu',
     environment: environment,
@@ -24,6 +24,9 @@ module.exports = function(environment) {
     },
     pace: {
         color: 'green'
+    },
+    'ember-simple-auth': {
+        authenticationRoute: 'index'
     }
   };
 
@@ -48,7 +51,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-      ENV.APP.API.HOST = 'http://api.reservedu.com';
+      ENV.APP.API.HOST = 'https://api.reservedu.com';
   }
 
   return ENV;

@@ -7,8 +7,6 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('login');
-  this.route('register');
   this.route('admin', function() {
     this.route('payments');
     this.route('facilities');
@@ -19,7 +17,6 @@ Router.map(function() {
 
   // ERROR PAGES
   this.route('errors/404', {path: '/*path'});
-
 });
 
 export default Router;

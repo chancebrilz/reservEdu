@@ -6,12 +6,20 @@ export default Ember.Controller.extend({
         return tokens.join(' - ') + ' - reservEdu';
     },
 
-    session: Ember.inject.service('session'),
+    session: Ember.inject.service(),
+
+    currentUser: Ember.inject.service(),
+
+    schoolStep1: true,
+
+    schoolStep2: false,
 
     actions: {
+
         invalidateSession() {
             this.get('session').invalidate();
         }
+
     }
 
 });

@@ -4,9 +4,10 @@
 /*** Fonts ***/
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
-#login-form, #register-form {
+
+.auth-form {
+    display: none;
     width: 350px;
-    margin: 100px auto;
 }
 
 #login-form h4 {
@@ -75,6 +76,7 @@ header {
     background: #FFFFFF;
     height: 54px;
     z-index: 10;
+    overflow: visible;
 }
 
 header.color {

@@ -1,3 +1,104 @@
+<div id="login-form" class="modal auth-form">
+    <div class="modal-content">
+        <form>
+            <h4>Login</h4>
+            {{#if errorMessage}}
+                <p class='error'>{{errorMessage}}</p>
+            {{/if}}
+            <div class="input-field">
+                <label for="email">Email</label>
+                {{input id='identification' value=loginData.identification }}
+            </div>
+            <div class="input-field">
+                <label for="password">Password</label>
+                {{input id='password' type='password' value=loginData.password}}
+            </div>
+            <div class="input-field">
+                <button class="btn green" type="submit" {{action 'authenticate'}}>Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="register-form" class="modal auth-form">
+    <div class="card-tabs">
+        <ul class="tabs row">
+            <li class="tab col s6 active"><a href="#register-personal" class="green-text">Personal</a></li>
+            <li class="tab col s6"><a href="#register-school" class="green-text">Activate School</a></li>
+            <div class="indicator green" style="z-index:1;"></div>
+        </ul>
+    </div>
+    <div class="modal-content">
+        <div class="card-content row">
+            <div id="register-personal" class="col s12">
+                <form id="register-personal-form">
+                    <h4>Create an account</h4>
+                    {{#if registerPersonalError}}
+                        <p class='error'>{{registerPersonalError}}</p>
+                    {{/if}}
+                    <div class="input-field">
+                        <label for="name">Full Name</label>
+                        {{input value=registerPersonalData.name }}
+                    </div>
+                    <div class="input-field">
+                        <label for="email">Email</label>
+                        {{input value=registerPersonalData.email }}
+                    </div>
+                    <div class="input-field">
+                        <label for="password">Password</label>
+                        {{input type='password' value=registerPersonalData.password}}
+                    </div>
+                    <div class="input-field">
+                        <button class="btn green" type="submit" {{action 'registerPersonal'}}>Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="register-school" class="row">
+                {{#if schoolStep1}}
+                    <form id="register-school-form" class="row col s12">
+                        <h4>Activate school</h4>
+                        <p>Start by entering your school's unique code.</p>
+                        {{#if registerSchoolError1}}
+                            <p class='error'>{{registerSchoolError1}}</p>
+                        {{/if}}
+                        <div class="input-field">
+                            <label for="code">Code</label>
+                            {{input value=registerSchoolData.code}}
+                        </div>
+                        <div class="input-field">
+                            <button class="btn green" type="submit" {{action 'registerSchool1'}}>Submit</button>
+                        </div>
+                    </form>
+                {{/if}}
+                {{#if schoolStep2}}
+                    <form id="register-school-form2" class="row col s12">
+                        <h4>Activate School</h4>
+                        {{#if registerSchoolError2}}
+                            <p class='error'>{{registerSchoolError2}}</p>
+                        {{/if}}
+                        {{input type='hidden' value=registerSchoolData.code2}}
+                        <div class="input-field">
+                            {{input value=registerSchoolData.name disabled=true}}
+                        </div>
+                        <div class="input-field">
+                            {{input value=registerSchoolData.email disabled=true}}
+                        </div>
+                        <div class="input-field">
+                            <label for="password">Password</label>
+                            {{input type='password' value=registerSchoolData.password}}
+                        </div>
+                        <div class="input-field">
+                            <button class="btn green" type="submit" {{action 'registerSchool2'}}>Submit</button>
+                        </div>
+                    </form>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
 {{#if session.isAuthenticated}}
     <div id="account-info">
         {{#if currentUser.user.meta.permissions.admin}}
@@ -9,7 +110,7 @@
     </div>
 {{else}}
     <div id="account-info" class="no-auth">
-        {{#link-to 'login'}} Login {{/link-to}}
-        {{#link-to 'register' class='btn btn-flat green white-text'}} Register {{/link-to}}
+        <a href="#" {{action 'loginModal'}}> Login </a>
+        <a href="#" class="btn btn-flat green white-text" {{action 'registerModal'}}>Register</a>
     </div>
 {{/if}}
