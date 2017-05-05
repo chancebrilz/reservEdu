@@ -3,15 +3,23 @@
 <table class="bordered responsive-table highlight">
     <thead>
         <tr>
-            <th>Name</th>
+            <th>Client Name</th>
+            <th>Date</th>
             <th>Amount</th>
+            <th>Type</th>
+            <th>Paid?</th>
+            <th>Description</th>
         </tr>
     </thead>
     <tbody>
         {{#each model as |payment|}}
             <tr>
                 <td>{{payment.stripe.source.name}}</td>
+                <td>{{stripe-date payment.stripe.created}}</td>
                 <td>{{stripe-amount payment.stripe.amount}}</td>
+                <td>{{payment.stripe.source.brand}}</td>
+                <td>{{payment.stripe.paid}}</td>
+                <td>{{payment.stripe.description}}</td>
             </tr>
         {{/each}}
     </tbody>

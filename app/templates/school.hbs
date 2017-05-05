@@ -1,6 +1,24 @@
 <div id="content">
 
-    <h2>{{model.name}}</h2>
-    <p>{{model.address}}</p>
+<style>
+   #map {
+    height: 400px;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,.1);
+   }
+</style>
+
+    <div class="row s12">
+
+        <div class="col s4">
+            <div id="map"></div>
+        </div>
+
+        <div class="col s8">
+            <h2 class="header">{{model.name}}</h2>
+            <p>{{model.address}}</p>
+        </div>
+
+    </div>
 
 </div>

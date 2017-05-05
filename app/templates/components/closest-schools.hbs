@@ -1,17 +1,28 @@
 {{#if schools}}
 
-    <div class="row flow">
+    <table style="display: block;">
+        <tbody style="display: block; width: auto; overflow-x: scroll; white-space: nowrap;">
+        <tr>
         {{#each schools as |school|}}
-            <div class="col">
+            <td>
                 {{#link-to 'school' school class='blue-text'}}
-                  <div class="card-panel">
-                      <h5 class="black-text">{{school.name}}</h5>
-                      <span class="grey-text">{{miles school.distance}} miles away</span>
-                  </div>
+                    <tr>
+                      <div class="card school-card">
+                          <div class="card-image">
+                              <img src="/assets/images/school_stock.jpeg">
+                              <span class="card-title">{{school.name}}</span>
+                          </div>
+                          <div class="card-content">
+                              <span class="grey-text">{{miles school.distance}} miles away</span>
+                          </div>
+                      </div>
+                  </tr>
                 {{/link-to}}
-            </div>
+            </td>
         {{/each}}
-    </div>
+        </tr>
+    </tbody>
+    </table>
 
 {{else}}
 

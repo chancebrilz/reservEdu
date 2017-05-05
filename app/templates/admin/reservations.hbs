@@ -1,1 +1,22 @@
-{{outlet}}
+<h2>All Reservations</h2>
+
+<table class="bordered responsive-table highlight">
+    <thead>
+        <tr>
+            <th>Client Name</th>
+            <th>Facility Name</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each model as |reservation|}}
+            <tr>
+                <td>{{reservation.user.name}}</td>
+                <td>{{reservation.facility.name}}</td>
+                <td>{{reservation.start_time}}</td>
+                <td>{{reservation.end_time}}</td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

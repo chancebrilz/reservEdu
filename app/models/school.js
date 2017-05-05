@@ -6,5 +6,7 @@ export default DS.Model.extend({
     code: DS.attr(),
     activated: DS.attr(),
     address: DS.attr(),
+    lat: DS.attr(),
+    lng: DS.attr(),
     distance: DS.attr()
 });

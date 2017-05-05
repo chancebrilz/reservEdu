@@ -5,8 +5,10 @@ export default Ember.Route.extend(AdminRouteMixin, {
 
     titleToken: 'Reservations',
 
+    currentUser: Ember.inject.service(),
+
     model() {
-        return this.store.query('reservation', {'type': 'current'});
+        return this.store.findAll('reservation');
     }
 
 });
