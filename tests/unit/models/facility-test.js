@@ -1,3 +1,4 @@
+//Tests a model of adding a facility to the system
 import { moduleForModel, test } from 'ember-qunit';
 
 moduleForModel('facility', 'Unit | Model | facility', {
