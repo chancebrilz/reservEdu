@@ -1,3 +1,4 @@
+//Creates a test to chek for the current user location
 import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('service:current-location', 'Unit | Service | current location', {
