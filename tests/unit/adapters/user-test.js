@@ -1,3 +1,4 @@
+//This test is used to check to make sire that the user settings are applicable
 import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('adapter:user', 'Unit | Adapter | user', {
