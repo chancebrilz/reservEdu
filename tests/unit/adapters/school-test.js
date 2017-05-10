@@ -1,3 +1,4 @@
+//This test makes sure that the schools are working within the system
 import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('adapter:school', 'Unit | Adapter | school', {
