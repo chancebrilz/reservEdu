@@ -1,3 +1,4 @@
+//Tests the payment system
 import { moduleForModel, test } from 'ember-qunit';
 
 moduleForModel('payment', 'Unit | Model | payment', {
