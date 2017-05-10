@@ -1,3 +1,4 @@
+//Tests the admins abilities to access the facilities page
 import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('controller:admin/facilities', 'Unit | Controller | admin/facilities', {
