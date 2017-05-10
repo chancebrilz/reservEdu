@@ -1,3 +1,4 @@
+//Test to check who the current user is
 import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('service:current-user', 'Unit | Service | current user', {
