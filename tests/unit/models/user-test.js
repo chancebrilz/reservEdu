@@ -1,3 +1,4 @@
+//Tests a model of adding a user to the system
 import { moduleForModel, test } from 'ember-qunit';
 
 moduleForModel('user', 'Unit | Model | user', {
