@@ -1,4 +1,4 @@
-
+//Tests a checking system for the facility price
 import { facilityPrice } from 'reservedu/helpers/facility-price';
 import { module, test } from 'qunit';
 
