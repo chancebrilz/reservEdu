@@ -1,3 +1,4 @@
+//Application test for the serializer
 import { moduleForModel, test } from 'ember-qunit';
 
 moduleForModel('application', 'Unit | Serializer | application', {
