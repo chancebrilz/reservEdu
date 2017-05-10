@@ -1,3 +1,4 @@
+//Tests the reservation process
 import { moduleForModel, test } from 'ember-qunit';
 
 moduleForModel('reservation', 'Unit | Model | reservation', {
