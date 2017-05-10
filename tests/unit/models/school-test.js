@@ -1,3 +1,4 @@
+//Tests a model of adding a school to the system
 import { moduleForModel, test } from 'ember-qunit';
 
 moduleForModel('school', 'Unit | Model | school', {
