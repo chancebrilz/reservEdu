@@ -1,4 +1,4 @@
-
+//Tests that the amount from stripe is accurate when payment us going through
 import { stripeAmount } from 'reservedu/helpers/stripe-amount';
 import { module, test } from 'qunit';
 
