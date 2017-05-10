@@ -1,3 +1,4 @@
+//Tests location services within the school page
 import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('route:school', 'Unit | Route | school', {
