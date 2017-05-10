@@ -1,3 +1,4 @@
+//Tests the school profile for reservations
 import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('controller:school', 'Unit | Controller | school', {
