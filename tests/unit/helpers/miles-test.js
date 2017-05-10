@@ -1,4 +1,4 @@
-
+//Tests the mileage from the user's current location to a location of a school
 import { miles } from 'reservedu/helpers/miles';
 import { module, test } from 'qunit';
 
