@@ -1,4 +1,4 @@
-
+//Tests that the date is accurate for stripe transactions
 import { stripeDate } from 'reservedu/helpers/stripe-date';
 import { module, test } from 'qunit';
 
