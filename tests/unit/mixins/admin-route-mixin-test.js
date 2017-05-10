@@ -1,3 +1,4 @@
+//Admin test for mixin
 import Ember from 'ember';
 import AdminRouteMixinMixin from 'reservedu/mixins/admin-route-mixin';
 import { module, test } from 'qunit';
