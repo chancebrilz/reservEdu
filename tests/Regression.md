@@ -8,4 +8,6 @@ After integration testing is performed:
 
 Tests that we be re-run during regression testing: 
 
-
+1. All tests under the /tests/unit & /tests/integration directories
+  a. Ember CLI (command line interface) allows to spin up a test server that runs these tests. The image following shows an example of this.
+2. Any assersions made in the serializers will be verified to ensure that any data getting passed from the API server is properly formatted.
