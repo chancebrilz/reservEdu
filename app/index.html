@@ -9,6 +9,10 @@
 
     {{content-for "head"}}
 
+    <meta property="og:title" content="reservEdu" />
+    <meta property="og:description" content="description" />
+    <meta property="og:image" content="thumbnail_image" />
+
     <link rel="stylesheet" href="{{rootURL}}assets/css/materialize.min.css">
     <link rel="stylesheet" href="{{rootURL}}assets/css/materialize.clockpicker.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -19,14 +23,18 @@
     {{content-for "head-footer"}}
   </head>
   <body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Facebook SDK Script -->
+  <div id="fb-root"></div>
+  <script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+  </script>
 
     {{content-for "body"}}
 
@@ -35,6 +43,7 @@
     <script pace-src="{{rootURL}}assets/js/materialize.min.js"></script>
     <script pace-src="{{rootURL}}assets/js/materialize.clockpicker.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-NAhgdqywR6IvYb4ZE0cJVhLIIh6T0nk" async defer></script>
+
 
     {{content-for "body-footer"}}
   </body>
