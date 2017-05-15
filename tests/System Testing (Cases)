@@ -1,0 +1,30 @@
+Booking a Reservation (SYSTEM TESTING):
+  The client logs in, if an account exists, else client registers.
+  After the log in is successful, the user selects the facility to reserve
+  After a facility has been reserved, the user picks the date and time from 
+    the available slots
+  The facility request will be updated and pushed into the queue for checkout
+  The user is prompted to enter the necessary information, only user information
+  Then the user is prompted to enter the payment information
+  Payment is handled by stripe
+  After the payment is validated, the receipt is displayed to the user
+  Also an email is sent to the user and the DOE of the receipt.
+  
+The steps above show how well the classes for the user side work together,
+  if there is an error at any point or unsuccessful reservation after following 
+  the guidelines then the system testing has failed.
+  
+  
+School Activation and Managing Reservation/Facility (SYSTEM TESTING):
+  The school would register in the site using the specific code provided and log in.
+  After activation, the school can manage their profile. It is highly recommended to
+    add a picture and a description before adding facilities.
+  School adds facilities and times available for the usage of the facilities.
+  School then promotes the facilities using social media features as share in facebook, etc.
+  *Schools can return at any point to add more facilities in the same fashion* (Can be done at any time)
+  School can return to manage reservation or facilities with the same steps, following the GUI
+  
+The steps above show sample usage of the site to portray how well the classes work together. 
+If any issues arise at any step then the system test fails. For example, following correct steps,
+schools cannot be activated with their unique code, or schools cannot manage facilities or reservations
+using the correct steps. 

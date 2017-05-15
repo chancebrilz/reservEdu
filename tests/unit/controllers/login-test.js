@@ -1,3 +1,4 @@
+//tests the login process 
 import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('controller:login', 'Unit | Controller | login', {

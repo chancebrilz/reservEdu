@@ -1,3 +1,4 @@
+//This test checks to make sure that the reservations are being entered and saved into the database
 import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('adapter:reservation', 'Unit | Adapter | reservation', {

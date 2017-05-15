@@ -1,3 +1,4 @@
+//This test checks to make sure that the registeration process is completed successfully
 import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('controller:register', 'Unit | Controller | register', {

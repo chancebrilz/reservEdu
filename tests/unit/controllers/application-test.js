@@ -1,3 +1,4 @@
+//Tests the overall controller application
 import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('controller:application', 'Unit | Controller | application', {

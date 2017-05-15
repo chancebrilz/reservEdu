@@ -1,3 +1,4 @@
+//Tests the admins abilities to control the index
 import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('controller:admin/index', 'Unit | Controller | admin/index', {

@@ -1,3 +1,4 @@
+//This test makes sure that the adapter is working overall
 import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('adapter:application', 'Unit | Adapter | application', {

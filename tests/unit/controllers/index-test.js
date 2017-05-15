@@ -1,3 +1,4 @@
+//This test checks the indexing for updating reservations within the system
 import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('controller:index', 'Unit | Controller | index', {
