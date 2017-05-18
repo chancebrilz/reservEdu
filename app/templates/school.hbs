@@ -12,6 +12,8 @@
 
         <div class="col s4">
             <div id="map"></div>
+            {{share-panel buttons="fb, twitter,linkedin" labels="Share,Tweet,Share" 
+                title =(concat school.name ' - reservEDU') url=router.url text=school.address}}
         </div>
         <div class="col s8">
             <h2 class="header">{{school.name}}</h2>
