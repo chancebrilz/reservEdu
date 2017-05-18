@@ -2,7 +2,7 @@
 
 <style>
    #map {
-    height: 400px;
+    height: 430px;
     width: 100%;
     border: 1px solid rgba(0,0,0,.1);
    }
@@ -10,25 +10,46 @@
 
     <div class="row s12">
 
-        <div class="right-align">
-            <div class="fb-share-button"
-                data-href="https://reservedu.com/school/121"
-                data-layout="button_count"
-                data-size="large">
-              </div>
-        </div>
-
         <div class="col s4">
             <div id="map"></div>
-            <div class="fb-page" data-href="https://www.facebook.com/reservEDU" data-tabs="timeline" data-width="500" data-height="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
-                <blockquote cite="https://www.facebook.com/reservEDU" class="fb-xfbml-parse-ignore">
-                    <a href="https://www.facebook.com/reservEDU">reservEdu</a>
-                </blockquote>
-            </div>
         </div>
         <div class="col s8">
-            <h2 class="header">{{model.name}}</h2>
-            <p>{{model.address}}</p>
+            <h2 class="header">{{school.name}}</h2>
+            <p>{{school.address}}</p>
+            <br>
+            <h3 class="underline" style="margin-bottom: 0px;">Facilites</h3>
+
+            {{#if facilities}}
+
+                <table style="display: block;">
+                    <tbody style="display: block; width: auto; overflow-x: scroll; white-space: nowrap;">
+                        <tr>
+                        {{#each facilities as |facility|}}
+                            <td>
+                                {{#link-to 'facility' facility class='blue-text'}}
+                                    <tr>
+                                      <div class="card school-card">
+                                          <div class="card-image">
+                                              <img src="/assets/images/facility_stock.jpg">
+                                              <span class="card-title">{{facility.name}}</span>
+                                          </div>
+                                          <div class="card-content">
+                                              <span class="grey-text">{{facility-price facility.meta.price}}</span>
+                                          </div>
+                                      </div>
+                                  </tr>
+                                {{/link-to}}
+                            </td>
+                        {{/each}}
+                        </tr>
+                    </tbody>
+                </table>
+
+            {{else}}
+
+                <p>Looks like this school doesn't have any facilities yet!</p>
+
+            {{/if}}
 
         </div>
 

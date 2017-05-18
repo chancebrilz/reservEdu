@@ -14,6 +14,7 @@ Router.map(function() {
   });
   this.route('profile', { path: '/profile/:user_id' });
   this.route('school', { path: '/school/:school_id' });
+  this.route('facility', { path: '/facility/:facility_id' });
 
   // ERROR PAGES
   this.route('errors/404', {path: '/*path'});
